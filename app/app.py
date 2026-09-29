@@ -10,14 +10,7 @@ secret_number = random.randint(1, 100)
 def index():
     global secret_number
 
-    message = ""T
-K8s
-deployment.yaml
-ingress.yaml
-namespace.yaml
-servicw.yaml
-app
-
+    message = ""
     attempts = request.cookies.get("attempts", "0")
 
     if request.method == "POST":
