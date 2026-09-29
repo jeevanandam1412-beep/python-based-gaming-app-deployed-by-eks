@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: gaming-app
+  namespace: gaming
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: gaming-app
+
+  template:
+    metadata:
+      labels:
+        app: gaming-app
+
+    spec:
+      containers:
+        - name: gaming-app
+
+          image: YOUR_ACCOUNT_ID.dkr.ecr.ap-south-1.amazonaws.com/gaming-app:latest #replace with aws account id
+
+          ports:
+            - containerPort: 8080
